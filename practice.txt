@@ -1,0 +1,9 @@
+file will have
+    id - id of the file
+    name - name of the file
+    extension - .mp3, .pdf, .mp4, .xlsx
+    size - size of the file
+    type - other, document, media, images
+    createdat
+    updatedat
+    folder - folder id of where the file belongs
