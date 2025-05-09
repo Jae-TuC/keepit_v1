@@ -10,29 +10,27 @@ export const generateFileUploadUrl = mutation({
 export const uploadFile = mutation({
   args: {
     name: v.string(),
-    extension: v.string(),
-    size: v.number(),
     type: v.union(
       v.literal("document"),
-      v.literal("media"),
       v.literal("images"),
+      v.literal("media"),
       v.literal("other")
     ),
-    folder: v.id("folders"),
+    extension: v.string(),
+    size: v.number(),
     url: v.string(),
-    storageId: v.string(),
+    storageId: v.id("_storage"),
+    folder: v.id("folders"),
   },
   handler: async (ctx, args) => {
-    const fileUrl = await ctx.storage.getUrl(args.storageId);
-
     await ctx.db.insert("files", {
       name: args.name,
+      type: args.type,
       extension: args.extension,
       size: args.size,
-      type: args.type,
-      folder: args.folder,
-      url: fileUrl || "",
+      url: args.url,
       storageId: args.storageId,
+      folder: args.folder,
     });
   },
 });
