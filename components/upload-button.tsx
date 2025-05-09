@@ -9,7 +9,7 @@ const UploadButton = () => {
   const { onOpen } = useUploadModal();
   return (
     <div className="flex items-center gap-2">
-      <Button variant="outline" onClick={() => onOpen("File")}>
+      <Button variant="outline" onClick={() => onOpen("file")}>
         <UploadCloud className="size-4" />
         <span>Upload file</span>
       </Button>
