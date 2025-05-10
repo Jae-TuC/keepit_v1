@@ -44,7 +44,8 @@ const FileCard = (file: FileRecord) => {
   };
 
   const handleView = () => {
-    const newWindow = window.open(file.url, "_blank", "noopener,noreferrer");
+    const viewUrl = `http://${window.location.host}/view/${file._id}`;
+    const newWindow = window.open(viewUrl, "_blank", "noopener,noreferrer");
     if (newWindow) newWindow.opener = null;
   };
 

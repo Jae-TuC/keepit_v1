@@ -66,7 +66,7 @@ const AppSidebar = () => {
         </Link>
       </SidebarHeader>
       <SidebarSeparator />
-      <SidebarContent className="mt-10 px-6">
+      <SidebarContent className="mt-10">
         <SidebarGroup>
           <SidebarGroupLabel>
             <div className="flex items-center gap-2">
@@ -75,7 +75,7 @@ const AppSidebar = () => {
               </span>
             </div>
           </SidebarGroupLabel>
-          <SidebarMenu className="space-y-1 mt-6">
+          <SidebarMenu className=" mt-6">
             {items.map((item) => (
               <SidebarMenuItem
                 key={item.title}
