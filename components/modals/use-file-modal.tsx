@@ -1,5 +1,6 @@
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { Id } from "@/convex/_generated/dataModel";
 
 import {
   Dialog,
@@ -55,11 +56,10 @@ const FileModal = () => {
         extension,
         size: size,
         type,
-        folder: "j57emgyv5tfkjk4j4a0epep3wh7f8yxt",
-        storageId,
+        folder: "j57emgyv5tfkjk4j4a0epep3wh7f8yxt" as Id<"folders">,
+        storageId: storageId as Id<"_storage">,
         url: "",
       };
-      //   @ts-expect-error - TODO: fix this
       await uploadFile(fileObject);
       toast.success("File uploaded successfully");
       setIsLoading(false);
