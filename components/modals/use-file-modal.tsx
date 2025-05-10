@@ -56,7 +56,7 @@ const FileModal = () => {
         extension,
         size: size,
         type,
-        folder: "j57emgyv5tfkjk4j4a0epep3wh7f8yxt" as Id<"folders">,
+        folder: "j975y2177f085fq02m6n9tabt17fmjwq" as Id<"folders">,
         storageId: storageId as Id<"_storage">,
         url: "",
       };
